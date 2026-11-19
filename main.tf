@@ -1,4 +1,4 @@
-# Updated bucket configuration
+# Version control infrastructure update
 iprovider "aws" {
   region = "ap-south-1"
 }
