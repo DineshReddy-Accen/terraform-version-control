@@ -1,10 +1,15 @@
-# Updated bucket configuration
+# Version control infrastructure update
 iprovider "aws" {
   region = "ap-south-1"
 }
 
 resource "aws_s3_bucket" "website_bucket" {
   bucket = var.bucket_name
+
+  tags = {
+    Name        = "project11-website"
+    Environment = "dev"
+  }
 }
 
 resource "aws_s3_bucket_website_configuration" "website" {
