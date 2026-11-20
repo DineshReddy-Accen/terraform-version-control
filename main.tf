@@ -5,6 +5,11 @@ iprovider "aws" {
 
 resource "aws_s3_bucket" "website_bucket" {
   bucket = var.bucket_name
+
+  tags = {
+    Name        = "project11-website"
+    Environment = "dev"
+  }
 }
 
 resource "aws_s3_bucket_website_configuration" "website" {
